@@ -1,7 +1,275 @@
 body {
-    background-color: #ccccc6c2;
+    background: #ccccc6c2;
 }
 
-svg {
-    width: 100%;
+path:hover {
+    animation: basis 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes basis {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* **************************** */
+
+#zaha:hover {
+    fill: green;
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
+
+#stella:hover {
+    fill: blue;
+}
+
+
+#hadid:hover {
+    fill: red;
+}
+
+#iott:hover {
+    animation: orange 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes orange {
+    0%, 100% {
+        fill: #CCC6C2;
+    }
+    50% {
+        fill: orange;
+    }
+}
+
+#rison:hover {
+    fill: yellow;
+}
+
+#ms:hover {
+    fill: #35a1fd;
+    animation-name: heartBeat;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+#iichael:hover {
+    fill: black;
+}
+
+#welcomes:hover {
+    fill: lightblue;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+
+#brits:hover {
+    fill: lightgreen;
+    animation-name: rollIn;
+    animation-iteration-count: infinite;
+}
+
+#established:hover {
+    fill: purple;
+    animation-name: rollOut;
+    animation-iteration-count: infinite;
+}
+
+#frank:hover {
+    fill: #ba6af4;
+}
+
+#sons:hover {
+    fill: aqua;
+}
+
+#taylor:hover {
+    fill: cadetblue;
+}
+
+#newYork:hover {
+    fill: deeppink;
+    animation: shake 2s;
+}
+
+#by:hover {
+    fill: dimgrey;
+    animation: nudge 1s;
+}
+
+#young:hover {
+    fill: beige;
+}
+
+#ong:hover {
+    fill: burlywood;
+}
+
+@keyframes nudge {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(50px, 0);
+    }
+
+    80% {
+        transform: translate(-50px, 0);
+    }
+}
+
+@keyframes shake {
+
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes bounce {
+
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.1);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rollOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
 }
