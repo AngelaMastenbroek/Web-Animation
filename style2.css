@@ -7,24 +7,11 @@ path:hover {
     animation-iteration-count: infinite;
 }
 
-@keyframes basis {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
 /* **************************** */
 
 div {
     display: grid;
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: auto 10%;
 }
 
 p {
@@ -36,8 +23,6 @@ p {
     margin: 0em;
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
     max-width: 750px;
     justify-self: center;
     overflow: hidden;
@@ -85,13 +70,6 @@ p {
 }
 
 /* **************************** */
-
-
-svg {
-    display: none;
-}
-
-
 
 #zaha:hover {
     color: green;
@@ -198,18 +176,16 @@ svg {
 
 #hadid:hover {
     color: red;
-    animation: rotate 1s ease-out infinite;
 }
 
 @keyframes rotate {
 
-    20%,
-    80% {
-        transform: rotateY(180deg);
+    0%, 100% {
+        transform: rotateY(0deg);
     }
 
-    100% {
-        transform: rotateY(360deg);
+    50% {
+        transform: rotateY(180deg);
     }
 }
 
@@ -231,37 +207,32 @@ svg {
 
 #rison:hover {
     color: yellow;
-    animation: ani 1s alternate infinite;
 }
 
 @keyframes ani {
     0% {
         transform: translate3d(0, 0, 0);
-        text-shadow: 0em 0em 0 blue;
-        color: black;
+        text-shadow: 0em 0em 0 black;
+        color: yellow;
     }
 
     30% {
         transform: translate3d(0, 0, 0);
-        text-shadow: 0em 0em 0 blue;
-        color: black;
+        text-shadow: 0em 0em 0 black;
+        color: yellow;
     }
 
     70% {
         transform: translate3d(-0.08em 0.08em, 0);
-        text-shadow: -0.08em 0.08em blue;
-        color: black;
+        text-shadow: -0.08em 0.08em black;
+        color: yellow;
     }
 
     100% {
         transform: translate3d(-0.08em 0.08em, 0);
-        text-shadow: -0.08em 0.08em blue;
-        color: black;
+        text-shadow: -0.08em 0.08em black;
+        color: yellow;
     }
-}
-
-#ms:hover {
-    color: #35a1fd;
 }
 
 #iichael:hover {
@@ -287,20 +258,42 @@ svg {
     }
 }
 
+.animate {
+    filter: invert(100%);
+}
+
+.animate2 {
+    animation: rotate 1s;
+}
+
+.animate3 {
+    animation: ani 1s forwards;
+}
+
+.animate4 {
+    animation: spin 2s infinite;
+}
+
+.animate5 {
+    color: deeppink;
+    animation: shrinkjump 1s infinite;
+    transform-origin: bottom center;
+}
+
 #brits:hover {
     color: lightgreen;
-    animation: toplong 1.5s linear infinite;
+    animation: toplong 1.5s cubic-bezier(.37,-0.38,.68,1.45) infinite;
 }
 
 @keyframes toplong {
 
     10%,
     40% {
-        transform: translateY(-48vh) scaleY(1);
+        transform: scaleY(1);
     }
 
     90% {
-        transform: translateY(-48vh) scaleY(4);
+        transform: scaleY(4);
     }
 }
 
@@ -316,6 +309,15 @@ svg {
     color: #ba6af4;
     animation: balance 1.5s ease-out;
     transform-origin: 0% 100% 0px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 p span {
@@ -340,12 +342,20 @@ p span {
 
 #sons:hover {
     color: aqua;
+    animation: slide cubic-bezier(.35,-0.51,.72,1.53) 1s infinite alternate;
+}
+
+@keyframes slide {
+    20% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+    transform: translate3d(200%, 0, 0);
+    }
 }
 
 #newYork:hover {
     color: deeppink;
-    animation: shrinkjump 1s infinite;
-    transform-origin: bottom center;
 }
 
 @keyframes shrinkjump {
@@ -363,6 +373,10 @@ p span {
     80% {
         transform: scale(1) translate(0, 0);
     }
+}
+
+#ms:hover {
+    color: coral;
 }
 
 #by:hover {
