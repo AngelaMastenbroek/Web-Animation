@@ -49,4 +49,6 @@ function logKey(e) {
 bronnen van code:
 https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event
 
+basis van code met hulp van Melanie gemaakt
+
 */
