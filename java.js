@@ -1,7 +1,7 @@
 console.log('hello world');
 
 var negative = document.querySelector('.negative');
-var licht = document.querySelector('p');
+var licht = document.querySelector('body');
 
 negative.addEventListener('click',function(){
     licht.classList.toggle('animate');

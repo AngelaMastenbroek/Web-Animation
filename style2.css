@@ -44,11 +44,30 @@ p span {
 }
 
 .licht {
-    color: #CCC6C2;
+    color: #d1cecc;
 }
 
 .donker {
     color: #C1C0BF;
+}
+
+/* **************************** */
+
+button {
+    font-size: 1em;
+    background-color: #d1cecc;
+    border: 2px solid #c1c0bf;
+    height: 4em;
+    width: 8em;
+    position: absolute;
+    margin: 1em;
+    border-radius: 1em;
+    text-transform: uppercase;
+    color: gray;
+}
+
+button:hover {
+    background-color: #c1c0bf;
 }
 
 /* **************************** */
